@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | DECENTRIX</title>
+  <meta name="description" content="Start your next brand or graphic design project with DECENTRIX. Tell us about your goals and the design services you need.">
+  <meta name="theme-color" content="#191919">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script src="projects-data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header" id="site-header">
+    <div class="container header-inner"><a class="logo" href="index.html">DECENTRIX</a><nav class="nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="portfolio.html">Portfolio</a><a href="contact.html">Contact</a></nav></div>
+  </header>
+  <main id="main" class="container section">
+    <p class="eyebrow">Let’s make it happen</p><h1>Your next chapter<br>starts here.</h1>
+    <p class="lead">Tell us what you’re building, what you need and where you want to go.</p>
+    <div class="contact-grid section">
+      <section aria-labelledby="contact-details"><h2 id="contact-details">Good work starts<br>with a conversation.</h2><p>Use the form, send an email or reach out on WhatsApp.</p><div class="contact-links" data-contact-links></div><p class="image-note">Contact details are placeholders. Update the contact object in script.js.</p></section>
+      <div>
+        <!-- REQUIRED: replace [MY_FORM_ID] with your Formspree form ID.
+             Keep method POST. Configure your recipient email in Formspree. -->
+        <form id="contact-form" action="https://formspree.io/f/[MY_FORM_ID]" method="POST">
+          <div class="form-row">
+            <div class="field"><label for="name">Name *</label><input id="name" name="name" autocomplete="name" maxlength="120" required></div>
+            <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required></div>
+          </div>
+          <div class="field"><label for="phone">Phone (optional)</label><input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40"></div>
+          <div class="field"><label for="service">Service needed *</label><select id="service" name="service" required><option value="">Choose a service</option><option>Logo design</option><option>Brand identity</option><option>Social media graphics</option><option>Print design</option><option>Other</option></select></div>
+          <div class="field"><label for="message">Message *</label><textarea id="message" name="message" minlength="10" maxlength="5000" required placeholder="Tell us a little about your project…"></textarea></div>
+          <div class="honeypot" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+          <button class="button" type="submit">Send message ↗</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          <noscript><p>This form opens Formspree’s response page after submission. The owner must configure the form ID first.</p></noscript>
+        </form>
+      </div>
+    </div>
+  </main>
+  <div id="site-footer"><footer><div class="container">© 2026 DECENTRIX. All rights reserved. <a href="contact.html">Contact</a></div></footer></div>
+</body>
+</html>
